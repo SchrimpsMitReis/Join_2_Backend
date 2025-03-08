@@ -41,7 +41,8 @@ Bevor du das Projekt startest, stelle sicher, dass folgende Software installiert
 5. **Server starten**
    ```bash
    python manage.py runserver
-
+   ```
+   
    Die App ist dann unter http://127.0.0.1:8000/ erreichbar.
 
 ### 🔹 Join Frontend
