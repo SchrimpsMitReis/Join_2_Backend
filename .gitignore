@@ -1,0 +1,28 @@
+# Virtuelle Umgebungen
+venv/
+env/
+
+# Bytecode-Cache von Python
+__pycache__/
+*.pyc
+*.pyo
+
+# Lokale Konfigurationsdateien
+*.log
+*.sqlite3
+*.db
+
+# Django-Migrations (optional)
+migrations/
+
+# Medien- und statische Dateien (optional)
+media/
+staticfiles/
+
+# Umgebungsvariablen (Sicherheitskritisch!)
+.env
+
+# IDE- und Editor-spezifische Dateien
+.vscode/
+.idea/
+*.swp
