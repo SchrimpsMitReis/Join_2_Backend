@@ -22,5 +22,28 @@ Bevor du das Projekt startest, stelle sicher, dass folgende Software installiert
 
 1. **Repository klonen**  
    ```bash
-   git clone https://github.com/dein-nutzername/dein-repo.git
-   cd dein-repo
+   git clone https://github.com/SchrimpsMitReis/Join_2_Backend.git
+
+2. **Virtuelle Umgebung erstellen und aktivieren**
+   ```bash
+   python -m venv env
+   source venv/bin/activate  # Linux/macOS
+   env\Scripts\activate     # Windows
+
+3. **Abhängikeiten und Addons**
+   ```bash
+   pip install -r requirements.txt
+
+4. **Datenbank-Migrationen ausführen**
+   ```bash
+   python manage.py migrate
+
+5. **Server starten**
+   ```bash
+   python manage.py runserver
+
+
+### 🔹 Join Frontend
+
+Das Join Frontend findet Ihr unter:
+[Mein Frontend-Repository](https://github.com/SchrimpsMitReis/Join_2_Frontend)
