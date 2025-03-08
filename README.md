@@ -42,8 +42,9 @@ Bevor du das Projekt startest, stelle sicher, dass folgende Software installiert
    ```bash
    python manage.py runserver
 
+   Die App ist dann unter http://127.0.0.1:8000/ erreichbar.
 
 ### 🔹 Join Frontend
 
 Das Join Frontend findet Ihr unter:
-[Mein Frontend-Repository](https://github.com/SchrimpsMitReis/Join_2_Frontend)
+[Join Frontend](https://github.com/SchrimpsMitReis/Join_2_Frontend)
