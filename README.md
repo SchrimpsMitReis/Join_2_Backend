@@ -1,14 +1,19 @@
 # 📌 Join Backend
 
 ## 📖 Beschreibung
-Dies ist ein Backend für das Projektmanagementtool Join aus der Developer Akademie. 
+Dies ist das Backend für die Anwendung Join. Es basiert auf Django und stellt eine REST-API bereit, die das Frontend mit den notwendigen Daten versorgt. Dieses Projekt ist eine Übung im Rahmen der Fullstack Developer Weiterbildung an der Developer Akademie.
 
 ## 🚀 Features
-- 🔹 Feature 1: CRUD für:
--   Tasks + Subtasks
--   Accounts
--   Kontakte
-- 🔹 Feature 2: Summery Endpoint
+- ✅ RESTful API mit Django Rest Framework
+- ✅ Benutzerverwaltung & Authentifizierung
+- ✅ Datenbankverwaltung mit Django ORM
+
+## 🏗 Technologie-Stack
+
+- **Backend:** Django, Django Rest Framework
+- **Datenbank:** PostgreSQL *(Falls SQLite genutzt wird, bitte anpassen)*
+
+
 
 ## 🛠 Installation & Setup
 
@@ -42,10 +47,16 @@ Bevor du das Projekt startest, stelle sicher, dass folgende Software installiert
    ```bash
    python manage.py runserver
    ```
-   
-   Die App ist dann unter http://127.0.0.1:8000/ erreichbar.
 
-### 🔹 Join Frontend
+   Die App ist dann unter http://127.0.0.1:8000/ erreichbar. Auf die URL ist auch das Frontend abgestimmt!
 
-Das Join Frontend findet Ihr unter:
-[Join Frontend](https://github.com/SchrimpsMitReis/Join_2_Frontend)
+## 🔗 Verwandte Repositories
+
+- 🌐 **Frontend:** [Join 2 Frontend](https://github.com/SchrimpsMitReis/Join_2_Frontend)
+- 🖥 **Backend:** [Join 2 Backend](https://github.com/SchrimpsMitReis/Join_2_Backend)
+
+
+## 📩 Kontakt
+
+📧 Email: [roman.schroeder@inclufilm.com](mailto\:roman.schroeder@inclufilm.com) 
+
