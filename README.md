@@ -11,7 +11,7 @@ Dies ist das Backend für die Anwendung Join. Es basiert auf Django und stellt e
 ## 🏗 Technologie-Stack
 
 - **Backend:** Django, Django Rest Framework
-- **Datenbank:** PostgreSQL *(Falls SQLite genutzt wird, bitte anpassen)*
+- **Datenbank:** PostgreSQL 
 
 
 
