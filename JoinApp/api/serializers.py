@@ -1,7 +1,8 @@
 from rest_framework import serializers
 from phonenumber_field.serializerfields import PhoneNumberField
-from JoinApp.models import Account, Contact, Subtask, Task
-from django.contrib.auth.hashers import make_password
+from JoinApp.models import Contact, Subtask, Task
+# from JoinApp.models import Account
+# from django.contrib.auth.hashers import make_password
 
 
 class ContactSerializer(serializers.ModelSerializer):
@@ -19,22 +20,22 @@ class SubtaskSerializer(serializers.ModelSerializer):
     def create(self, validated_data):
         return super().create(validated_data)
 
-class AccountSerializer(serializers.ModelSerializer):
+# class AccountSerializer(serializers.ModelSerializer):
 
-    password = serializers.CharField(write_only=True, required=True)
+#     password = serializers.CharField(write_only=True, required=True)
 
-    class Meta(ContactSerializer.Meta):
-        model = Account
-        fields = ["id", "name", "email", "tel", "password"]
+#     class Meta(ContactSerializer.Meta):
+#         model = Account
+#         fields = ["id", "name", "email", "tel", "password"]
 
-    def create(self, validated_data):
-        validated_data["password"] = make_password(validated_data["password"])  # Passwort hashen
-        return super().create(validated_data)   
+#     def create(self, validated_data):
+#         validated_data["password"] = make_password(validated_data["password"])  # Passwort hashen
+#         return super().create(validated_data)   
     
-    def update(self, instance, validated_data):
-        if "password" in validated_data:
-            validated_data["password"] = make_password(validated_data["password"])
-        return super().update(instance, validated_data)
+#     def update(self, instance, validated_data):
+#         if "password" in validated_data:
+#             validated_data["password"] = make_password(validated_data["password"])
+#         return super().update(instance, validated_data)
 
 class TaskSerializer(serializers.ModelSerializer):
 

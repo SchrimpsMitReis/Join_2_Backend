@@ -1,11 +1,13 @@
 from rest_framework.response import Response
-from rest_framework.decorators import api_view
+# from rest_framework.decorators import api_view
 from rest_framework.views import APIView
 from rest_framework import viewsets
-from rest_framework.authtoken.models import Token
+# from rest_framework.authtoken.models import Token
 from django.contrib.auth.hashers import check_password
-from JoinApp.api.serializers import AccountSerializer, ContactSerializer, SubtaskSerializer, SummerySerializer, TaskSerializer
-from JoinApp.models import Account, Contact, Subtask, Task
+from JoinApp.api.serializers import ContactSerializer, SubtaskSerializer, SummerySerializer, TaskSerializer
+# from JoinApp.api.serializers import AccountSerializer
+from JoinApp.models import Contact, Subtask, Task
+# from JoinApp.models import Account
 from rest_framework import status
 from django.db.models import Min, Max
 
@@ -26,27 +28,27 @@ class SubtaskViewSet(viewsets.ModelViewSet):
     def update(self, request, *args, **kwargs):
         return super().update(request, *args, **kwargs)
 
-class AccountViewSet(viewsets.ModelViewSet):
-    queryset = Account.objects.all()
-    serializer_class = AccountSerializer
+# class AccountViewSet(viewsets.ModelViewSet):
+#     queryset = Account.objects.all()
+#     serializer_class = AccountSerializer
 
-class LoginView(APIView):
+# class LoginView(APIView):
 
-    def post(self, request):
-        email = request.data.get("email")
-        password = request.data.get("password")
+#     def post(self, request):
+#         email = request.data.get("email")
+#         password = request.data.get("password")
 
-        try:
-            user = Account.objects.get(email=email)
-        except Account.DoesNotExist:
-            return Response({"error": "Ungültige Anmeldeinformationen"}, status=status.HTTP_401_UNAUTHORIZED)
+#         try:
+#             user = Account.objects.get(email=email)
+#         except Account.DoesNotExist:
+#             return Response({"error": "Ungültige Anmeldeinformationen"}, status=status.HTTP_401_UNAUTHORIZED)
         
-        if not check_password(password, user.password):
-            return Response({"error": "Ungültige Anmeldeinformationen"}, status=status.HTTP_401_UNAUTHORIZED)
+#         if not check_password(password, user.password):
+#             return Response({"error": "Ungültige Anmeldeinformationen"}, status=status.HTTP_401_UNAUTHORIZED)
         
-        token, created = Token.objects.get_or_create(user=user)
+#         token, created = Token.objects.get_or_create(user=user)
 
-        return Response({"token": token.key, "user_id": user.id}, status=status.HTTP_200_OK)
+#         return Response({"token": token.key, "user_id": user.id}, status=status.HTTP_200_OK)
     
 class SummeryView(APIView):
 

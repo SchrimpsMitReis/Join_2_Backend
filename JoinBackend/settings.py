@@ -38,6 +38,7 @@ INSTALLED_APPS = [
     'django.contrib.messages',
     'django.contrib.staticfiles',
     'JoinApp',
+    'user_auth_app',
     'corsheaders',
     "rest_framework",
     "rest_framework.authtoken",
@@ -55,7 +56,7 @@ MIDDLEWARE = [
     
 ]
 
-AUTH_USER_MODEL = 'JoinApp.Account'
+AUTH_USER_MODEL = 'user_auth_app.Account'
 
 CORS_ALLOW_ALL_ORIGINS = True
 

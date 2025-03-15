@@ -1,6 +1,6 @@
 from django.db import models
 from phonenumber_field.modelfields import PhoneNumberField
-from django.contrib.auth.models import AbstractUser, AbstractBaseUser, BaseUserManager
+# from django.contrib.auth.models import AbstractUser, AbstractBaseUser, BaseUserManager
 
 
 class Subtask(models.Model):
@@ -22,19 +22,19 @@ class Contact(models.Model):
         return self.name
 
 
-class Account(Contact, AbstractUser):
+# class Account(Contact, AbstractUser):
 
-    username = None
-    password = models.CharField(max_length=128)
+#     username = None
+#     password = models.CharField(max_length=128)
 
-    USERNAME_FIELD = 'email'
-    REQUIRED_FIELDS = []
-    class Meta:
-        verbose_name = "Account"
-        verbose_name_plural = "Accounts"
+#     USERNAME_FIELD = 'email'
+#     REQUIRED_FIELDS = []
+#     class Meta:
+#         verbose_name = "Account"
+#         verbose_name_plural = "Accounts"
 
-    def __str__(self):
-        return self.name
+#     def __str__(self):
+#         return self.name
 
 
 class Task(models.Model):
