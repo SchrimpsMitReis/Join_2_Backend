@@ -84,6 +84,13 @@ REST_FRAMEWORK = {
         'rest_framework.renderers.JSONRenderer',  # JSON-Renderer für API-Antworten
         'rest_framework.renderers.BrowsableAPIRenderer',  # WICHTIG für die DRF-Web-Oberfläche
     ),
+    'DEFAULT_AUTHENTICATION_CLASSES': [
+        'rest_framework.authentication.TokenAuthentication',
+    ],
+    'DEFAULT_PERMISSION_CLASSES': [
+        'rest_framework.permissions.IsAuthenticatedOrReadOnly',
+    ]
+
 }
 
 ROOT_URLCONF = 'JoinBackend.urls'
@@ -158,3 +165,5 @@ STATIC_URL = 'static/'
 # https://docs.djangoproject.com/en/5.1/ref/settings/#default-auto-field
 
 DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
+
+AUTH_USER_MODEL = "user_auth_app.Account"

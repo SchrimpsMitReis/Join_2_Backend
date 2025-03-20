@@ -20,22 +20,6 @@ class SubtaskSerializer(serializers.ModelSerializer):
     def create(self, validated_data):
         return super().create(validated_data)
 
-# class AccountSerializer(serializers.ModelSerializer):
-
-#     password = serializers.CharField(write_only=True, required=True)
-
-#     class Meta(ContactSerializer.Meta):
-#         model = Account
-#         fields = ["id", "name", "email", "tel", "password"]
-
-#     def create(self, validated_data):
-#         validated_data["password"] = make_password(validated_data["password"])  # Passwort hashen
-#         return super().create(validated_data)   
-    
-#     def update(self, instance, validated_data):
-#         if "password" in validated_data:
-#             validated_data["password"] = make_password(validated_data["password"])
-#         return super().update(instance, validated_data)
 
 class TaskSerializer(serializers.ModelSerializer):
 

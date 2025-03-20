@@ -10,4 +10,5 @@ router.register(r'accounts', AccountViewSet)
 urlpatterns = [
     path('', include(router.urls), name='hello_world'),
     path("login/", LoginView.as_view(), name="login"),
+    # path("accounts/", AccountViewSet, name="signup"),
 ]
